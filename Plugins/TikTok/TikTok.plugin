@@ -1,0 +1,44 @@
+#!name=TikTok
+#!desc=TikTok Unlock
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/TikTok/TikTok.png
+#!select = Region, Japan, Korea, UnitedStates
+#!date=2024-03-17
+
+[Rule]
+DOMAIN, lf16-effectcdn.byteeffecttos-g.com, PROXY
+DOMAIN, lf16-pkgcdn.pitaya-clientai.com, PROXY
+DOMAIN, p16-tiktokcdn-com.akamaized.net, PROXY
+DOMAIN-SUFFIX, bytedapm.com, PROXY
+DOMAIN-SUFFIX, bytegecko-i18n.com, PROXY
+DOMAIN-SUFFIX, bytegecko.com, PROXY
+DOMAIN-SUFFIX, byteoversea.com, PROXY
+DOMAIN-SUFFIX, capcut.com, PROXY
+DOMAIN-SUFFIX, ibytedtos.com, PROXY
+DOMAIN-SUFFIX, ibyteimg.com, PROXY
+DOMAIN-SUFFIX, ipstatp.com, PROXY
+DOMAIN-SUFFIX, isnssdk.com, PROXY
+DOMAIN-SUFFIX, muscdn.com, PROXY
+DOMAIN-SUFFIX, musical.ly, PROXY
+DOMAIN-SUFFIX, sgpstatp.com, PROXY
+DOMAIN-SUFFIX, snssdk.com, PROXY
+DOMAIN-SUFFIX, tik-tokapi.com, PROXY
+DOMAIN-SUFFIX, tiktok.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn-us.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn.com, PROXY
+DOMAIN-SUFFIX, tiktokd.net, PROXY
+DOMAIN-SUFFIX, tiktokd.org, PROXY
+DOMAIN-SUFFIX, tiktokmusic.app, PROXY
+DOMAIN-SUFFIX, tiktokv.com, PROXY
+DOMAIN-KEYWORD, musical.ly, PROXY
+DOMAIN-KEYWORD, tiktok, PROXY
+USER-AGENT, TikTok*, PROXY
+
+[Script]
+http-request ^https?:\/\/((tnc|dm)[\w-]+.+?\.com\/.+|.+\.(byteoversea|tiktokv).com\/.+(_region=CN&|&mcc_mnc=4)) script-path=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/TikTok/TikTok.js, tag=TikTok
+http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/(favorite|listcollection)) script-path=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/TikTok/Watermark.js, requires-body=true, tag=Watermark
+
+[Mitm]
+hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com
