@@ -1,0 +1,13 @@
+﻿#!name=Emby
+#!desc=Emby Premiere
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Emby/Emby.png
+#!date=2024-03-17
+
+[Script]
+http-response ^https?:\/\/(www\.|)mb3admin.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, max-size=131072, script-path=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Emby/Emby.js, tag=Emby
+
+[Mitm]
+hostname=mb3admin.com
