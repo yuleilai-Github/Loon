@@ -1,0 +1,17 @@
+#!name=Search
+#!desc=Quick Search
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Search/Search.png
+#!date=2024-03-18
+
+[Rewrite]
+^https:\/\/duckduckgo\.com\/\?q=bd\+([^&]+).+ 302 https://www.baidu.com/s?wd=$1
+^https:\/\/duckduckgo\.com\/\?q=bi\+([^&]+).+ 302 https://www.bing.com/search?q=$1
+^https:\/\/duckduckgo\.com\/\?q=wk\+([^&]+).+ 302 https://zh.wikipedia.org/wiki/$1
+^https:\/\/duckduckgo\.com\/\?q=gh\+([^&]+).+ 302 https://github.com/search?q=$1
+^https:\/\/duckduckgo\.com\/\?q=([^&]+).+ 302 https://www.google.com/search?q=$1
+
+[Mitm]
+hostname=duckduckgo.com
