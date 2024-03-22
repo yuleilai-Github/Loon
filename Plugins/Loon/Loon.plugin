@@ -1,0 +1,45 @@
+#!name=Loon
+#!desc=Loon
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Loon/Loon.png
+#!date=2024-03-22
+
+[Rule]
+# Docker
+DOMAIN-SUFFIX,hub.docker.com,United States
+# Dorcel
+DOMAIN-SUFFIX,dorcelclub.com,Pornhub
+# FanArt
+DOMAIN-SUFFIX,assets.fanart.tv,United States
+# Jable
+DOMAIN,jable.tv,Pornhub
+DOMAIN,assets.jable.tv,Pornhub
+DOMAIN,assets-cdn.jable.tv,Pornhub
+# JavDB
+DOMAIN,javdb.com,Pornhub
+DOMAIN,sample.mgstage.com,Pornhub
+# JavLibrary
+DOMAIN-SUFFIX,javlibrary.com,Pornhub
+# Madou
+DOMAIN,madou.club,Pornhub
+DOMAIN,dash.madou.club,Pornhub
+# Medium
+DOMAIN-SUFFIX,medium.com,United States
+# RSSHub
+DOMAIN-SUFFIX,rsshub.app,United States
+# RSSHub
+DOMAIN-SUFFIX,rsshub.app,United States
+# Sehuatang
+DOMAIN-SUFFIX,sehuatang.net,Pornhub
+DOMAIN-SUFFIX,sehuatang.org,Pornhub
+# TheMovieDB
+DOMAIN-SUFFIX,themoviedb.org,United States
+DOMAIN-SUFFIX,tmdb.org,United States
+# TheTVDB
+DOMAIN-SUFFIX,thetvdb.com,United States
+# V2EX
+DOMAIN-SUFFIX,v2ex.com,United States
+# 1024
+DOMAIN-SUFFIX,t66y.com,Pornhub
