@@ -1,0 +1,13 @@
+#!name=Instapaper
+#!desc=Instapaper premium
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Instapaper/Instapaper.png
+#!date=2024-03-22
+
+[Script]
+http-response ^https:\/\/www\.instapaper\.com\/api\/subscription_status requires-body=1, script-path=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/Instapaper/Instapaper.js, tag=Instapaper
+
+[Mitm]
+hostname=www.instapaper.com
