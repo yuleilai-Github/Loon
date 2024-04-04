@@ -1,0 +1,18 @@
+#!name=YouTube
+#!desc=YouTube Remove Advertising
+#!openUrl=
+#!author=Larry
+#!homepage=
+#!icon=https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/YouTube/YouTube.png
+#!date=2024-04-04
+
+[Rewrite]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
+
+[Script]
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) script-path = https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/YouTube/YouTube_request.js, requires-body = true, binary-body-mode = true, tag = YouTube Request
+
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path = https://raw.githubusercontent.com/yuleilai-Github/Loon/master/Plugins/YouTube/YouTube_response.js, requires-body = true, binary-body-mode = true, tag = YouTube Response
+
+[Mitm]
+hostname = *.googlevideo.com, youtubei.googleapis.com
