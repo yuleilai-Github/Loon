@@ -8,22 +8,22 @@
 
 [Rule]
 # Docker
-DOMAIN-SUFFIX,hub.docker.com,United States
+DOMAIN,hub.docker.com,United States
 # Dorcel
 DOMAIN-SUFFIX,dorcelclub.com,Pornhub
 # FanArt
-DOMAIN-SUFFIX,assets.fanart.tv,United States
+DOMAIN,assets.fanart.tv,United States
 # Jable
-DOMAIN,jable.tv,Pornhub
+DOMAIN-SUFFIX,jable.tv,Pornhub
 DOMAIN,assets.jable.tv,Pornhub
 DOMAIN,assets-cdn.jable.tv,Pornhub
 # JavDB
-DOMAIN,javdb.com,Pornhub
+DOMAIN-SUFFIX,javdb.com,Pornhub
 DOMAIN,sample.mgstage.com,Pornhub
 # JavLibrary
 DOMAIN-SUFFIX,javlibrary.com,Pornhub
 # Madou
-DOMAIN,madou.club,Pornhub
+DOMAIN-SUFFIX,madou.club,Pornhub
 DOMAIN,dash.madou.club,Pornhub
 # Medium
 DOMAIN-SUFFIX,medium.com,United States
@@ -34,6 +34,10 @@ DOMAIN-SUFFIX,rsshub.app,United States
 # Sehuatang
 DOMAIN-SUFFIX,sehuatang.net,Pornhub
 DOMAIN-SUFFIX,sehuatang.org,Pornhub
+# Subtitlecat
+DOMAIN-SUFFIX,subtitlecat.com,Pornhub
+# Synology
+DOMAIN-SUFFIX,synology.me,DIRECT
 # TheMovieDB
 DOMAIN-SUFFIX,themoviedb.org,United States
 DOMAIN-SUFFIX,tmdb.org,United States
